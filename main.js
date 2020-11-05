@@ -97,7 +97,7 @@ const icons = [
     }
 ];
 
-//Milestone 2
+//Milestone 3
 
 //Creo array con tre colori da assegnare alle icone a seconda del tipo
 const colori = ['red', 'green', 'blue'];
