@@ -126,12 +126,18 @@ icons.forEach((icon) => {
 icons.forEach((element) => {
 
     //destrutturo element per utilizzare solamente le key che mi servono
-    const {prefix, name, family} = element;
+    const {prefix, name, family, type} = element;
+
+    //Recupero index type di ogni oggetto.
+    const index_type = icons_types.indexOf(type);
+
+    //Associo colore a seconda del type. E vado ad aggiungere nel template literal lo style color: ${icon_color}.
+    const icon_color = colori[index_type];
 
     //Utilizzo un template literal per visualizzare in pagina le icone.
     $('#container-icons').append(`
         <div class="pref-icon">
-            <i class="${family} ${prefix}${name} fa-2x"></i>
+            <i class="${family} ${prefix}${name} fa-2x" style="color: ${icon_color}"></i>
             <p>${name}</p>
         </div>
     `);
