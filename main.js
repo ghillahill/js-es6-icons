@@ -97,16 +97,20 @@ const icons = [
     }
 ];
 
+//Milestone 1
+
+//Scorro elementi dell'array icons
 icons.forEach((element) => {
+
+    //destrutturo element per utilizzare solamente le key che mi servono
     const {prefix, name, family} = element;
 
+    //Utilizzo un template literal per visualizzare in pagina le icone.
     $('#container-icons').append(`
         <div class="pref-icon">
             <i class="${family} ${prefix}${name} fa-2x"></i>
             <p>${name}</p>
         </div>
     `);
-
-
 
 });
