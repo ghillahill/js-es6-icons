@@ -121,6 +121,16 @@ icons.forEach((icon) => {
 
 //console.log(icons_types);
 
+icons_types.forEach((element) => {
+    $('.icons-filtro').append(`
+        <option value="${element}">${element}</option>
+        `);
+});
+
+$('.icons-filtro').change(() => {
+    const type_selected = $('.icons-filtro').val();
+});
+
 
 //Scorro elementi dell'array icons
 icons.forEach((element) => {
