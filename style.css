@@ -3,3 +3,25 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+#container-icons {
+    padding: 50px;
+    margin: 50px;
+    border: 2px solid red;
+}
+
+#container-icons::after {
+    clear: both;
+    display: table;
+    content: '';
+}
+
+.pref-icon {
+    width: 15%;
+    height: 30%;
+    float: left;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}

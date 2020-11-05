@@ -101,9 +101,12 @@ icons.forEach((element) => {
     const {prefix, name, family} = element;
 
     $('#container-icons').append(`
-        <div>
-            <i class"${family} ${prefix}${name}"></i>
+        <div class="pref-icon">
+            <i class="${family} ${prefix}${name} fa-2x"></i>
+            <p>${name}</p>
         </div>
     `);
+
+
 
 });
