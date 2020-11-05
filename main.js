@@ -97,7 +97,30 @@ const icons = [
     }
 ];
 
-//Milestone 1
+//Milestone 2
+
+//Creo array con tre colori da assegnare alle icone a seconda del tipo
+const colori = ['red', 'green', 'blue'];
+
+//Creo array che conterrà i type delle varie icone
+const icons_types = [];
+
+//Scorro array icons per verificare il type e pusharlo dentro l'array icons_types in caso un type non è presente.
+icons.forEach((icon) => {
+
+    //destrutturo ogni oggetto di icons prendendo soltanto la chiave type.
+    const {type} = icon;
+
+    //Se l'array contiene già uno dei tre tipi non pushare, altrimenti pusha.
+    if (!icons_types.includes(type)) {
+
+        //Pusho nell'array icons_types i tre type.
+        icons_types.push(type)
+    }
+});
+
+//console.log(icons_types);
+
 
 //Scorro elementi dell'array icons
 icons.forEach((element) => {
